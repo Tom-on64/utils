@@ -1,0 +1,14 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  margin: 8px;
+  background-color: #70809090;
+  border: solid black 2px;
+}

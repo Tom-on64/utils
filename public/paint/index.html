@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utils | Paint</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <canvas id="paintCanvas"></canvas>
+    <navbar>
+      <div>
+        <label>Color: </label>
+        <input type="text" id="paintColor" value="#000000" />
+      </div>
+      <div>
+        <label>Width: </label>
+        <input type="number" id="paintThickness" value="10" />
+      </div>
+      <button
+        onClick="document.querySelector('#paintCanvas').getContext('2d').fillRect(0, 0, document.querySelector('#paintCanvas').width, document.querySelector('#paintCanvas').height)"
+      >
+        Clear
+      </button>
+      <a href="..">Back</a>
+    </navbar>
+  </body>
+</html>

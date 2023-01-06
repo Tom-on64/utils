@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utils | TextEdit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <textarea id="text" rows="20" cols="60"></textarea> <br />
+    <navbar>
+      <button onclick="document.getElementById('text').value = ''">
+        Clear
+      </button> <br />
+
+      <label>Text Size: </label>
+      <input
+      value="16"
+        id="textSize"
+        type="number"
+        onchange="document.getElementById('text').style.fontSize = `${this.value}px`"
+      />px <br />
+    
+      <a href="..">Back</a>
+    </navbar>
+  </body>
+</html>
