@@ -1,0 +1,32 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 4px;
+  margin: 2px;
+  background-color: #70809090;
+  border: solid black 2px;
+}
+
+nav #generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav form {
+  display: flex;
+  flex-direction: column;
+}
+
+canvas {
+  border: black 4px solid;
+  image-rendering: pixelated;
+}

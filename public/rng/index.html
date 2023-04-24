@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div id="generator">
+        <h3 id="num">0</h3>
+        <div>
+          <label for="min">Min: </label
+          ><input type="number" id="min" value="0" />
+        </div>
+        <div>
+          <label for="max">Max: </label
+          ><input type="number" id="max" value="100" />
+        </div>
+        <button onclick="generateNumber()">Generate!</button>
+      </div>
+      <hr />
+      <form id="generatorForm">
+        <div>
+          <label for="seed">seed: </label
+          ><input type="number" id="seed" value="7363738" />
+        </div>
+        <div>
+          <label for="a">a: </label
+          ><input type="number" id="a" value="1664525" />
+        </div>
+        <div>
+          <label for="c">c: </label
+          ><input type="number" id="c" value="1013904223" />
+        </div>
+        <div>
+          <label for="m">m: </label
+          ><input type="number" id="m" value="4294967296" />
+        </div>
+        <input type="submit" value="Render" />
+      </form>
+    </nav>
+    <canvas id="canvas"></canvas>
+  </body>
+</html>
