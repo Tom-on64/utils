@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utils | Particles</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 4px;
+        margin: 2px;
+        background-color: #70809090;
+        border: solid black 2px;
+      }
+    </style>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <navbar>
+      <div>
+        <label>Color: </label>
+        <input type="text" onchange="particleColor = this.value" value="lime" />
+      </div>
+      <div>
+        <label>Radius: </label>
+        <input
+          type="number"
+          onchange="particleRadius = this.value"
+          value="10"
+        />
+      </div>
+      <div>
+        <label>Outline: </label>
+        <input
+          type="text"
+          onchange="particleOutline = this.value"
+          value="black"
+        />
+      </div>
+      <button onclick="isStopped = !isStopped" id="stopButton">Stop</button>
+      <button onclick="checkBounds = !checkBounds" id="boundsButton">
+        Bounds?
+      </button>
+      <button
+        onClick="particles.forEach(particle => particle.velocity = {x: 0, y: 0})"
+      >
+        Reset Velocity
+      </button>
+      <button
+        onClick="particles.forEach(particle => {particle.velocity.x += Math.floor(Math.random() * 10) * -Math.round(Math.random()); particle.velocity.y += Math.floor(Math.random() * 10) * -Math.round(Math.random())})"
+      >
+        Random Velocity
+      </button>
+      <div>
+        <label>Speed: </label
+        ><input
+          type="range"
+          step="0.1"
+          min="0.5"
+          max="5"
+          onchange="speed = this.value"
+          value="1"
+        />
+      </div>
+      <button
+        onClick="particles = []; ctx.clearRect(0, 0, canvas.width, canvas.height);;"
+      >
+        Clear
+      </button>
+      <a href="..">Back</a>
+    </navbar>
+  </body>
+</html>

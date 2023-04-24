@@ -21,6 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     width: fit-content;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -31,4 +33,5 @@ a {
     padding: 8px 16px;
     margin: 2px;
     border-radius: 4px;
+    width: 90%;
 }

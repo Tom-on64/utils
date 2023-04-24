@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utils | Text Animator</title>
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Animation</h1>
+    <h2 id="animation"></h2>
+    <button onclick="prev()">Prev</button>
+    <input id="index" type="number" value="0" width="2ch" />
+    <button onclick="next()">Next</button> <br />
+    Frames: <span id="frames"></span> <br>
+    <label>New Frame: </label>
+    <input id="newFrame" type="text" />
+    <button
+      onClick="animation.push(document.getElementById('newFrame').value); document.getElementById('newFrame').value = ''"
+    >
+      Add
+    </button>
+    <br />
+    <button onclick="animation.pop()">Remove Last</button> <br />
+    <button onclick="animation = []">Clear</button> <br />
+    <a href="..">Back</a>
+    <script>
+      let animation = [];
+
+      const render = () => {
+        requestAnimationFrame(render);
+        document.querySelector("#animation").textContent =
+          animation[
+            parseInt(document.querySelector("#index").value) % animation.length
+          ];
+
+        document.querySelector("#frames").textContent = animation
+      };
+
+      const prev = () => {
+        document.getElementById("index").value =
+          parseInt(document.getElementById("index").value) - 1;
+      };
+
+      const next = () => {
+        document.getElementById("index").value =
+          parseInt(document.getElementById("index").value) + 1;
+      };
+
+      render();
+    </script>
+  </body>
+</html>

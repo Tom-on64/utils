@@ -1,0 +1,11 @@
+{
+    "name": "Cool Sheet", 
+    "description": "Idk its cool!", 
+    "spreadsheet": [
+        ["<b>Name</b>", "<b>Age</b>", "<b>Gender</b>", "<b>Time</b>"], 
+        ["Jack", "19", "M", "20:35"], 
+        ["Gregor", "20", "M", "15:08"], 
+        ["Stacy", "18", "F", "21:01"]
+    ]
+}
+

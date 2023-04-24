@@ -1,0 +1,62 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar {
+    flex-grow: 0;
+    border-bottom: 4px black solid;
+    padding: 4px 8px;
+}
+
+#toolbar button {
+    border: 1px gray solid;
+    background-color: white;
+    border-radius: 4px;
+    padding: 2px;
+    margin-right: 8px;
+}
+
+#toolbar button:hover {
+    background-color: #DDD;
+}
+
+#toolbar button:active {
+    background-color: #EEE;
+    border-color: black;
+}
+
+#sheetArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#spreadsheet {
+    flex-grow: 1;
+    padding: 8px
+}
+
+#spreadsheet #sheet {
+    border-collapse: collapse;
+    width: fit-content;
+    border-left: black 1px solid;
+    border-top: black 1px solid;
+}
+
+#spreadsheet #sheet tr {
+    border-collapse: collapse;
+}
+
+#spreadsheet #sheet tr td {
+    border-collapse: collapse;
+    padding: 2px;
+    border-right: black 1px solid;
+    border-bottom: black 1px solid;
+}

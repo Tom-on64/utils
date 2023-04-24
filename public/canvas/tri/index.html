@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trigonometry</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      canvas {
+        border: black 2px solid;
+      }
+
+      #data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 64px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="data">
+      <h1 id="sin">Sin: 0</h1>
+      <h1 id="cos">Cos: 1</h1>
+    </div>
+    <canvas id="art"></canvas>
+    <script src="app.js"></script>
+  </body>
+</html>
