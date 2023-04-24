@@ -12,11 +12,17 @@
     <div id="toolbar">
       <button onclick="importData()">Import</button>
       <button onclick="exportData()">Export</button>
+      <button
+        onclick="importData(importSheet(JSON.stringify({name:'',description:'',spreadsheet:[['']]})))"
+      >
+        Clear
+      </button>
       <button onclick="importData(importSheet(JSON.stringify(example)))">
         Load Example
       </button>
       <a href="..">Back</a>
-      <label>Sheet Data: </label><input id="data" type="text" />
+      <!-- INVISIBLE FOR CLIPBOARD -->
+      <input id="data" type="text" />
     </div>
     <div id="spreadsheet">
       <div id="info">
@@ -30,9 +36,15 @@
         />
       </div>
       <div id="sheetArea">
-          <table id="sheet"></table>
-          <button onclick="addCol()">+</button>
-          <button onclick="addRow()">+</button>
+        <table id="sheet"></table>
+        <div>
+          <button onclick="addCol()">+</button
+          ><button onclick="removeCol()">-</button>
+        </div>
+        <div>
+          <button onclick="addRow()">+</button
+          ><button onclick="removeRow()">-</button>
+        </div>
       </div>
     </div>
   </body>

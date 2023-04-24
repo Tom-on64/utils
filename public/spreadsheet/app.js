@@ -12,8 +12,9 @@ const example = {
 
 const createCell = () => {
   const newItem = document.createElement("td");
-  const input = document.createElement("input");
-  input.type = "text";
+  const input = document.createElement("textarea");
+  input.cols = 5;
+  input.rows = 1;
   newItem.appendChild(input);
   return newItem;
 };
@@ -67,12 +68,6 @@ const exportSheet = () => {
   return data;
 };
 
-const importData = (data = undefined) => {
-  if (!data) data = importSheet(prompt("Enter Spreadsheet Data:"));
-  document.getElementById("sheet").remove();
-  document.getElementById("sheetArea").prepend(data);
-};
-
 const addRow = () => {
   const newRow = document.createElement("tr");
 
@@ -92,6 +87,25 @@ const addCol = () => {
 
     col.appendChild(createCell());
   }
+};
+
+const removeRow = () => {
+  rows = document.getElementById("sheet").children;
+  rows[rows.length - 1].remove();
+};
+
+const removeCol = () => {
+  for (let i = 0; i < sheet.children.length; i++) {
+    const col = sheet.children[i];
+
+    col.children[col.children.length - 1].remove();
+  }
+};
+
+const importData = (data = undefined) => {
+  if (!data) data = importSheet(prompt("Enter Spreadsheet Data:"));
+  document.getElementById("sheet").remove();
+  document.getElementById("sheetArea").prepend(data);
 };
 
 const exportData = () => {

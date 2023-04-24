@@ -34,6 +34,7 @@ body {
 
 #sheetArea {
     display: grid;
+    width: fit-content;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
@@ -59,4 +60,8 @@ body {
     padding: 2px;
     border-right: black 1px solid;
     border-bottom: black 1px solid;
+}
+
+#data {
+    display: none;
 }
