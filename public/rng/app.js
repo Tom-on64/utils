@@ -44,6 +44,9 @@ const render = () => {
 document.getElementById("generatorForm").onsubmit = (e) => {
   e.preventDefault();
 
+  y = 0;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   seed = e.target[0].value;
   a = e.target[1].value;
   c = e.target[2].value;
@@ -52,4 +55,17 @@ document.getElementById("generatorForm").onsubmit = (e) => {
   render();
 
   seed = e.target[0].value;
+};
+
+const reset = () => {
+  const v = document.getElementById("generatorForm").children;
+  v[0].children[1].value = seed;
+  v[1].children[1].value = a;
+  v[2].children[1].value = c;
+  v[3].children[1].value = m;
+
+  seed = 7363738;
+  a = 1664525;
+  c = 1013904223;
+  m = Math.pow(2, 32);
 };
