@@ -27,6 +27,7 @@
         <div>
           <label for="seed">seed: </label
           ><input type="number" id="seed" value="7363738" />
+          <h4 id="seedDisplay"></h4>
         </div>
         <div>
           <label for="a">a: </label
@@ -43,7 +44,20 @@
         <input type="submit" value="Render" />
       </form>
       <button onclick="reset()">RESET</button>
+      <a href="../">Back</a>
     </nav>
     <canvas id="canvas"></canvas>
+    <div id="about">
+      <h2>The Algorithm</h2>
+      <p>
+        This algorithm is very simple. It takes in a Seed, an A value, a C value
+        and a Modulus (m). <br />
+        All it does is multiply the <b>Seed</b> by <b>A</b> and add <b>C</b>.
+        <br />
+        Then it divides that number by <b>M</b> and takes the remainder to be
+        the new <b>Seed</b>
+      </p>
+      <code class="code">seed = (seed * a + c) % m;</code>
+    </div>
   </body>
 </html>
