@@ -1,0 +1,64 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+body {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+}
+
+#data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+#data > * {
+    padding: 8px;
+}
+
+#data > * table {
+    border: 2px black solid;
+}
+
+#data > * table tr > * {
+    border: 1px black solid;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#controls #btns {
+    display: flex;
+}
+
+#controls #btns button {
+    flex-grow: 1;
+}
