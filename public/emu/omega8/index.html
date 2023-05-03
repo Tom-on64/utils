@@ -11,6 +11,7 @@
   </head>
   <body>
     <h2>Data</h2>
+    <p id="warning"></p>
     <div id="data">
       <div id="registers">
         <h3>Registers</h3>
@@ -38,6 +39,10 @@
           <tr>
             <td>O</td>
             <td id="regO">00000000</td>
+          </tr>
+          <tr>
+            <td>S</td>
+            <td id="regS">00000000</td>
           </tr>
           <tr>
             <td>P</td>
@@ -122,14 +127,26 @@
     <div id="controls">
       <h2>Controls</h2>
       <div id="btns">
-        <button onclick="reset()">RESET</button>
+        <button onclick="reset()">CLEAR</button>
         <button onclick="step()">STEP</button>
-        <button onclick="stop()">STOP</button>
-        <button onclick="run()">RUN</button>
         <button onclick="compile()">COMPILE</button>
+        <button onclick="reload()">LOAD</button>
       </div>
       <h3>Code:</h3>
-      <textarea name="code" id="code" cols="16" rows="16"></textarea>
+      <textarea name="code" id="code" cols="16" rows="16">
+SET 1111 01110111
+SET 1110 01110110
+LDA 1111
+LDB 1110
+SUB
+STA 1101
+OUT 1101
+HLT</textarea
+      >
     </div>
+    <a href="./design.md">Design</a>
+    <a href="./Chip.png">Chip</a>
+    <a href="./Architecture.png">Architecture</a>
+    <a href="../">Back</a>
   </body>
 </html>
