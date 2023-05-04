@@ -22,7 +22,7 @@ Max 16Hz clock
 1100 INC      | Increments A by one                              | A++ 
 1101 DEC      | Decrements A by one                              | A-- 
 1110 ATS      | Sets A to value at S                             | A = S
-1111 SAB      | Swaps values of A and B                          | {A swaps with B}
+1111 ATB      | Sets A to value at B                             | A = B
 ### Special
 SET<add><val> | Sets value at address                            | [add] = val
 

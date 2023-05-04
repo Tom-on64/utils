@@ -62,7 +62,7 @@ const ins = {
   INC: "1100",
   DEC: "1101",
   ATS: "1110",
-  SAB: "1111",
+  ATB: "1111",
   SET: "set",
 };
 
@@ -155,12 +155,8 @@ const step = () => {
   else if (i == "1101")
     setReg("A", (parseInt(getReg("A"), 2) - 1).toString(2).padStart(8, "0"));
   else if (i == "1110") setReg("A", getReg("S"));
-  else if (i == "1111") {
-    console.log("swap");
-    const temp = getReg("A");
-    setReg("A", getReg("B"));
-    setReg("B", temp);
-  } else console.log("HELP");
+  else if (i == "1111") setReg("A", getReg("B"));
+  else console.log("HELP");
 
   setFlag(0, parseInt(getReg("A"), 2) == 0 ? "1" : "0");
   setReg("P", (parseInt(getReg("P"), 2) + 1).toString(2).padStart(4, "0"));
@@ -191,7 +187,7 @@ const compile = () => {
 
 const reload = () => {
   reset();
-  emu.ram = emu.compiled;
+  emu.ram = JSON.parse(JSON.stringify(emu.compiled));
 };
 
 const render = () => {
