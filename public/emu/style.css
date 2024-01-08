@@ -20,6 +20,7 @@ h1 {
 main {
     display: flex;
     flex-grow: 1;
+    gap: 8px;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 8px 64px;

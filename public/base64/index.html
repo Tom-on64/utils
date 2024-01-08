@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base 64</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        *, ::before, ::after { padding: 0px; margin: 0px; box-sizing: border-box; }
+        h1 { text-align: center; padding: 4px; }
+        body { display: flex; flex-direction: column; width: 100vw; height: 100vh; }
+        #input {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 3;
+            gap: 4px;
+            padding: 8px;
+        }
+        #input span {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: center;
+        } #input span textarea { flex-grow: 1; }
+        #btns {
+            flex-grow: 2;
+            padding: 2px 12px;
+        }
+        #footer { flex-grow: 1; text-align: center; }
+        #input span #error { display: none; color: red; font-size: medium; }
+    </style>
+</head>
+<body>
+    <h1>Base 64 converter</h1>
+    <div id="input">
+        <span><h3>Decoded</h3><textarea id="decoded"></textarea></span>
+        <span><h3>Encoded <span id="error">Invalid Characters!</span></h3><textarea id="encoded"></textarea></span>
+    </div>
+    <div id="btns">
+        <button id="encode">Encode</button>
+        <button id="decode">Decode</button>
+    </div>
+    <a id="footer" href="../">Back</a>
+    <script>
+        const encoded = document.getElementById('encoded');
+        const decoded = document.getElementById('decoded');
+
+        document.getElementById("encode").onclick = () => encoded.value = btoa(decoded.value);
+        document.getElementById("decode").onclick = () => {
+            try { decoded.value = atob(encoded.value); }
+            catch (err) { error(); }
+        }
+
+        const error = () => {
+            document.getElementById("error").style.display = "block";
+            setTimeout(() => document.getElementById("error").style.display = "none", 2500);
+        }
+    </script>
+</body>
+</html>
