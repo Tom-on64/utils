@@ -1,0 +1,24 @@
+TODO
+====
+
+Design
+------
+[ ] Redesign
+[ ] Dark/light mode
+
+Pages
+-----
+[ ] ASCII Table
+[ ] Base64 encode/decode
+[ ] Paint
+[ ] Random number generator
+[ ] Text editor + animator (merge)
+[ ] Time utils (unix time)
+
+Extras
+------
+[ ] Particle simulation
+[ ] Spreadsheet
+[ ] Emulators
+[ ] Experiments
+
