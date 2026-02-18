@@ -1,0 +1,107 @@
+*, ::before, ::after { box-sizing: border-box; }
+* { margin: 0; }
+
+@font-face {
+	font-family: FiraCode;
+	src: url('/FiraCode-Regular.ttf') format('truetype'),
+}
+
+:root {
+	--color-foreground: #A2AAB3;
+	--color-background: #112A2A;
+	--color-accent: #187A7A;
+	--color-border: #001A1A;
+	--color-success: #3AAA1F;
+	--color-failure: #FB4324;
+	--nav-closed: 3.9em;
+	--nav-open: 12em;
+
+	color: var(--color-foreground);
+	background: var(--color-background);
+	border-color: var(--color-border);
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+	font-family: "FiraCode", sans-serif;
+}
+
+nav {
+	width: var(--nav-closed);
+}
+
+.navlist {
+	width: var(--nav-closed);
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 8px;
+	background: var(--color-background);
+	border-right: 3px solid var(--color-border);
+	list-style: none;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 100;
+	transition: width 300ms;
+}
+nav:hover .navlist {
+	width: var(--nav-open);
+}
+
+.navlist li a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.5em;
+	color: var(--color-foreground);
+	font-size: 1.4em;
+	text-decoration: none;
+	gap: 20px;
+}
+
+main {
+	flex-grow: 1;
+	padding: 8px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 4px;
+	margin: 4px;
+	background: var(--color-border);
+	border-radius: 4px;
+	font-size: 0.8em;
+	opacity: 10%;
+	transition: opacity 300ms;
+}
+footer:hover { opacity: 80%; }
+footer a { color: var(--color-foreground); }
+
+h1, h2, h3 {
+	width: fit-content;
+	color: var(--color-accent);
+}
+h1::after {
+	display: block;
+	position: relative;
+	top: -8px;
+	content: '';
+	margin: 2px 8px;
+	border: 1px solid var(--color-accent);
+	opacity: 40%;
+}
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.2em; }
+
+a {
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+a:visited { color: var(--color-accent); }
+
