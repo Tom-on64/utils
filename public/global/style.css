@@ -92,13 +92,14 @@ footer {
 	background: var(--color-border);
 	border-radius: 4px;
 	font-size: 0.8em;
-	opacity: 10%;
+	opacity: 30%;
 	transition: opacity 300ms;
 }
 footer:hover { opacity: 80%; }
 footer a { color: var(--color-foreground); }
 
 h1, h2, h3 {
+	margin: 0.6em 0.2em 0.4em 0.2em;
 	width: fit-content;
 	color: var(--color-accent);
 }
