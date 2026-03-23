@@ -60,7 +60,6 @@ nav:hover .navlist {
 	font-size: 1.4em;
 	text-decoration: none;
 	gap: 20px;
-	transition: color 300ms, transform 300ms;
 }
 
 .navlist li a.current {
@@ -74,9 +73,9 @@ nav:hover .navlist {
 	border-bottom: 2px solid var(--color-accent);
 }
 
-
-.navlist li a:hover { color: var(--color-accent); }
-.navlist li a:active { transform: scale(90%); }
+.navlist li a p { transition: color 300ms, transform 300ms; }
+.navlist li a:hover p { color: var(--color-accent); }
+.navlist li a:active p { transform: scale(90%); }
 
 main {
 	flex-grow: 1;

@@ -33,9 +33,10 @@ nav:hover .navlist { width: 30rem; }
 	background: var(--color-border);
 	border-radius: 12px;
 	font-size: 1.4em;
+	transition: color 300ms, transform 300ms;
 }
 .navlist li a i { font-size: 2.4em; }
-.navlist li a:hover { transform: scale(110%); }
+.navlist li a:hover { color: var(--color-accent); transform: scale(110%); }
 .navlist li a:active { transform: scale(90%); }
 
 /* Hide the home button on home */
