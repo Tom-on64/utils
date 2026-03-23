@@ -3,7 +3,7 @@
 
 @font-face {
 	font-family: FiraCode;
-	src: url('/FiraCode-Regular.ttf') format('truetype'),
+	src: url('/res/FiraCode-Regular.ttf') format('truetype'),
 }
 
 :root {
@@ -60,7 +60,23 @@ nav:hover .navlist {
 	font-size: 1.4em;
 	text-decoration: none;
 	gap: 20px;
+	transition: color 300ms, transform 300ms;
 }
+
+.navlist li a.current {
+	font-weight: bold;
+	color: var(--color-success);
+}
+
+.navlist li:first-child a {
+	font-weight: bold;
+	color: var(--color-foreground);
+	border-bottom: 2px solid var(--color-accent);
+}
+
+
+.navlist li a:hover { color: var(--color-accent); }
+.navlist li a:active { transform: scale(90%); }
 
 main {
 	flex-grow: 1;

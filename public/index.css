@@ -1,0 +1,43 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.2em;
+}
+
+h1 { font-size: 3.2em; }
+
+nav { width: fit-content; }
+.navlist {
+	width: 40vw;
+	height: 40vw;
+	position: static;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 18px;
+	border: none;
+	list-style: none;
+}
+nav:hover .navlist { width: 40vw; }
+
+.navlist li a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	background: var(--color-border);
+	border-radius: 12px;
+	font-size: 1.4em;
+}
+.navlist li a i { font-size: 2.4em; }
+.navlist li a:hover { transform: scale(110%); }
+.navlist li a:active { transform: scale(90%); }
+
+/* Hide the home button on home */
+.navlist li:first-child { display: none; }
+

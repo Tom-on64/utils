@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		navbar.forEach(({ name, path, icon }) => {
 			const navEl = document.createElement("li");
 			const isActive = window.location.pathname.includes(path);
-			navEl.innerHTML = `<a href="${path}" ${isActive ? 'class="active"' : ''}><i class="ph ph-${icon}"></i> ${name}</a>`;
+			navEl.innerHTML = `<a href="${path}" ${isActive ? 'class="current"' : ''}><i class="ph ph-${icon}"></i> ${name}</a>`;
 			navlist.appendChild(navEl);
 		})
 		nav.appendChild(navlist);
