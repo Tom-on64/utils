@@ -1,11 +1,13 @@
 My Utilities
 ============
+https://my-utilities.web.app
 
 This is a simple set of utilities that I made for me & anyone else to use.
 
-Links
------
-The website: https://my-utilities.web.app
-Figma design: https://www.figma.com/design/P5tV1QuU8QSzdrzVdwswYV/My-Utilities
-Gemini chat: https://gemini.google.com/share/e07ff3c9acc8
+Project structure
+-----------------
+* public/ contains all files that are hosted
+  * public/global/ contains global css and js
+  * public/res/ contains images and such
+  * public/<util>/ contains the html, css and js for a specific utility
 

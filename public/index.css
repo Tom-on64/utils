@@ -10,8 +10,8 @@ h1 { font-size: 3.2em; }
 
 nav { width: fit-content; }
 .navlist {
-	width: 40vw;
-	height: 40vw;
+	width: 30rem;
+	height: 30rem;
 	position: static;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -20,7 +20,7 @@ nav { width: fit-content; }
 	border: none;
 	list-style: none;
 }
-nav:hover .navlist { width: 40vw; }
+nav:hover .navlist { width: 30rem; }
 
 .navlist li a {
 	width: 100%;
