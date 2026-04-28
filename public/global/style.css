@@ -48,7 +48,7 @@ nav {
 	z-index: 100;
 	transition: width 300ms;
 }
-nav:hover .navlist {
+nav.enabled:hover .navlist {
 	width: var(--nav-open);
 }
 
@@ -79,6 +79,9 @@ nav:hover .navlist {
 .navlist li a:active p { transform: scale(90%); }
 
 main {
+	display: flex;
+	flex-direction: column;
+	flex-direction: column;
 	flex-grow: 1;
 	padding: 16px;
 }
@@ -145,7 +148,7 @@ a:visited { color: var(--color-accent); }
 		border-bottom: 3px solid var(--color-border);
 		padding: 4px;
 	}
-	nav:hover .navlist { width: 100%; }
+	nav.enabled:hover .navlist { width: 100%; }
 
 	.navlist li a {
 		font-size: 1.1em;

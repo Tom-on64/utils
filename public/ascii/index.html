@@ -7,15 +7,24 @@
 	<title>My Utilities</title>
 	<link rel="stylesheet" href="/global/style.css">
 	<script src="/global/pagegen.js" defer></script>
+
+	<link rel="stylesheet" href="ascii.css">
+	<script src="ascii.js" defer></script>
 </head>
 <body>
 	<nav id="nav"></nav>
 	<main>
 		<h1>ASCII table</h1>
-		<p>This should be just a simple ASCII table. It should have a decimal,
-			hexadecimal, binary &amp; character representation for each character.</p>
-		<p>The non-visual symbols should have their corresponding 3 character pneumonic.</p>
-		<p>Clicking on any field should copy it's value to the users clipboard.</p>
+		<div class="container">
+			<article class="table" id="table"></article>
+			<article class="infobox">
+				<h2 class="chr" id="chr"></h2>
+				<p class="lore" id="lore"></p>
+				<p>Hex: 0x<span class="hex" id="hex"></span></p>
+				<p>Dec: <span class="dec" id="dec"></span></p>
+				<p>Bin: <span class="bin" id="bin"><span></p>
+			</article>
+		</div>
 	</main>
 	<footer id="footer"></footer>
 </body>

@@ -27,7 +27,7 @@ nav {
 	border: none;
 	list-style: none;
 }
-nav:hover .navlist { width: 100%; }
+nav.enabled:hover .navlist { width: 100%; }
 
 .navlist li a {
 	width: 100%;
