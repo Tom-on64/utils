@@ -7,12 +7,22 @@
 	<title>My Utilities</title>
 	<link rel="stylesheet" href="/global/style.css">
 	<script src="/global/pagegen.js" defer></script>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="base64.js" defer></script>
 </head>
 <body>
 	<nav id="nav"></nav>
 	<main>
-		<h1>B64 encode/decode or sum</h1>
-		<p>Maybe add more encoding schemes?</p>
+		<h1>Base 64</h1>
+		<article class="container">
+			<textarea rows=8 cols=36 name="text" id="text"></textarea>
+			<div class="buttons">
+				<button id="conv-to"><i class="ph ph-arrow-fat-lines-right"></i></button>
+				<button id="conv-from"><i class="ph ph-arrow-fat-lines-left"></i></button>
+			</div>
+			<textarea rows=8 cols=36 name="base64" id="base64"></textarea>
+		</article>
 	</main>
 	<footer id="footer"></footer>
 </body>
