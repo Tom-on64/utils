@@ -7,13 +7,45 @@
 	<title>My Utilities</title>
 	<link rel="stylesheet" href="/global/style.css">
 	<script src="/global/pagegen.js" defer></script>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="rng.js" defer></script>
 </head>
 <body>
 	<nav id="nav"></nav>
 	<main>
-		<h1>RNG</h1>
-		<p>Just copy over <a href="/old/rng">the original</a> and restyle it.</p>
-		<p>Maybe add more generator options?</p>
+		<h1>Random Number Generator</h1>
+		<section class="controls">
+			<h2>RNG Controls</h2>
+			<p class="labeled-input"><label for="min">Min: </label><input type="number" id="min"></p>
+			<p class="labeled-input"><label for="max">Max: </label><input type="number" id="max"></p>
+			<p class="labeled-input"><label for="seed">Seed: </label><input type="number" id="seed"></p>
+			<hr>
+			<p class="labeled-input"><label for="a">a = </label><input type="number" id="a"></p>
+			<p class="labeled-input"><label for="c">c = </label><input type="number" id="c"></p>
+			<p class="labeled-input"><label for="m">m = </label><input type="number" id="m"></p>
+			<button id="render">Test the algorithm</button>
+		</section>
+		<section class="info">
+			<h2>The Algorithm</h2>
+			<p>
+				This algorithm is very simple. It takes in a Seed, an A value, a C value and a Modulus (m).
+				All it does is multiply the Seed by A and add C.
+				Then it divides that number by M and takes the remainder to be the new seed
+			</p>
+			<math>seed = (seed &times; a + c) % m</math>
+		</section>
+		<section class="generator">
+			<h2>Number: <span id="number">0</span></h2>
+			<button id="generate">Generate!</button>
+		</section>
+		<section id="tester" class="tester">
+			<div class="container">
+				<p>Numbers generated: <span id="number-count">0</span></p>
+				<p>Collisions detected: <span id="collision-count">0</span></p>
+				<canvas id="canvas"></canvas>
+			</div>
+		</section>
 	</main>
 	<footer id="footer"></footer>
 </body>

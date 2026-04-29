@@ -126,26 +126,63 @@ a {
 a:visited { color: var(--color-accent); }
 
 button {
-	background: var(--color-foreground);
-	border: 1px solid var(--color-border);
-	border-radius: 8px;
+	padding: 4px 2ch;
+	color: var(--color-foreground);
+	background: var(--color-border);
+	border: 2px solid var(--color-border);
+	border-radius: 4px;
+	transition: border-color 200ms, transform 50ms;
+}
+
+button:hover {
+	border-color: var(--color-accent);
+}
+
+button:active {
+	transform: scale(97%);
+}
+
+hr {
+	margin: 0.4em 1em;
+	border: none;
+	border-top: 2px solid var(--color-accent);
+}
+
+input, textarea {
+	flex-grow: 1;
+	padding: 4px 8px;
+	margin: 0 1ch;
+	color: var(--color-foreground);
+	background: var(--color-border);
+	border: 2px solid var(--color-border);
+	border-radius: 4px;
+	outline: none;
 }
 
 textarea {
-	padding: 4px 8px;
 	margin: 2em;
-	color: var(--color-foreground);
-	background: var(--color-border);
-	border: none;
-	outline: none;
 	font-size: 1.4em;
-	resize: none;
 	border-radius: 8px;
+	resize: none;
 }
 
-textarea:active {
-	border: none;
+textarea:focus, input:focus {
+	border-color: var(--color-accent);
 	outline: none;
+}
+
+.labeled-input {
+	display: flex;
+	flex-direction: row;
+}
+
+math {
+	width: 100%;
+	display: block;
+	padding: 8px;
+	font-family: "FiraCode", sans-serif;
+	font-size: 1.2em;
+	text-align: center;
 }
 
 /* Mobile */
