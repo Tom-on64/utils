@@ -48,6 +48,7 @@ let y = 0;
 let number_count = 0;
 let collision_count = 0;
 let collisionCheck = [];
+let tid = 0;
 const render = () => {
 	for (let x = 0; x < canvas.width; x++) {
 		const r = random();
@@ -70,12 +71,18 @@ const render = () => {
 
 	if (y < canvas.height) y++;
 	else {
-		setTimeout(() => { display.tester.style.display = "none"; }, 2000);
+		tid = setTimeout(() => { display.tester.style.display = "none"; }, 2000);
 		return;
 	}
 
 	requestAnimationFrame(render);
 };
+
+document.getElementById("tester").addEventListener("click", () => {
+	display.tester.style.display = "none";
+	clearTimeout(tid);
+	y = canvas.height;
+});
 
 render_btn.addEventListener("click", (e) => {
 	e.preventDefault();

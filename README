@@ -9,5 +9,5 @@ Project structure
 * public/ contains all files that are hosted
   * public/global/ contains global css and js
   * public/res/ contains images and such
-  * public/<util>/ contains the html, css and js for a specific utility
+  * public/<util>/ contains the index.html, style.css and <util>.js for a specific utility
 
