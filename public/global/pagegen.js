@@ -5,10 +5,10 @@ const navbar = [
 	{ name: "My Utils", path: "/", icon: "toolbox" },
 	{ name: "Paint", path: "/paint", icon: "paint-brush" },
 	{ name: "Ascii", path: "/ascii", icon: "binary" },
-	{ name: "Base64", path: "/base64", icon: "file-code" },
 	{ name: "RNG", path: "/rng", icon: "dice-five" },
-	{ name: "Text", path: "/text", icon: "cursor-text" },
+	{ name: "Particles", path: "/particles", icon: "atom" },
 	{ name: "Time", path: "/time", icon: "clock" },
+	{ name: "Base64", path: "/base64", icon: "file-code" },
 ];
 
 if (nav) {

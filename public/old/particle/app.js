@@ -1,12 +1,7 @@
-/** @type {HTMLCanvasElement} */
 
 // DOM
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
 
 // basic setup
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 let isStopped = false;
 let checkBounds = false;
 let speed = 1;

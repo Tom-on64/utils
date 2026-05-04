@@ -7,13 +7,24 @@
 	<title>My Utilities</title>
 	<link rel="stylesheet" href="/global/style.css">
 	<script src="/global/pagegen.js" defer></script>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="particles.js" defer></script>
 </head>
 <body>
 	<nav id="nav"></nav>
 	<main>
-		<h1>Text utilities</h1>
-		<p>Maybe merge with <a href="/base64">Base64</a> and add a bunch of encodings?</p>
-		<p>Also text animator and ascii art maker.</p>
+		<h1>Particle Simulation</h1>
+		<!-- TODO:
+		<section class="controls">
+			<h2>Controls</h2>
+		</section>
+		-->
+		<canvas id="canvas"></canvas>
+		<section id="warning" class="warning">
+			<h2>Warning</h2>
+			<p>This thing might or might not work on mobile. Idk I didn't test shit :shrug:</p>
+		</section>
 	</main>
 	<footer id="footer"></footer>
 </body>
