@@ -7,46 +7,72 @@
 	<title>My Utilities</title>
 	<link rel="stylesheet" href="/global/style.css">
 	<script src="/global/pagegen.js" defer></script>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="time.js" defer></script>
 </head>
 <body>
 	<nav id="nav"></nav>
 	<main>
-		<h1>Time</h1>
-		<p>
-		Ticking away the moments that make up the dull day. <br>
-		Fritter and waste all the hours in an offhand way. <br>
-		Kicking around on a piece of ground in your hometown. <br>
-		Waiting for someone or something to show the way. <br>
-		</p> <br>
-		<p>
-		Tired of lying in the sunshine, staying home to watch the rain. <br>
-		You are young and life is long, and there is time to kill today. <br>
-		And then one day you find, then years have got behing you. <br>
-		No one told you when to run, you missed the starting gun. <br>
-		</p> <br>
-		<p>
-		And you run and you run to catch up with the sun, but it's sinking. <br>
-		Racing around to come up behind you again. <br>
-		The sun is the same, in a relative way, but you're older. <br>
-		Shorter of breath and one day closer to death. <br>
-		</p> <br>
-		<p>
-		Every year is getting shorter, never seem to find the time. <br>
-		Plans that either come to naught, or half a page of scribbled lines. <br>
-		Hanging on in quiet desparation is the English way. <br>
-		The time is gone, the song is over. Thought I'd something more to say. <br>
-		</p> <br>
-		<p>
-		Home, home again. I like to be here when I can. <br>
-		When I come home, cold and tired. It's good to warm my bones beside the fire. <br>
-		Far away, across the field. <br>
-		The tolling of the iron bell. <br>
-		Calls the faithfull to their knees. <br>
-		To hear the softly spoken magic spell. <br>
-		</p> <br>
-
-
-		<small>Probs just a clock and the timers + countdowns from <a href="/old/time">the original</a></small>
+		<h1><span id="easter-egg">Time</span> &amp; Timers</h1>
+		<section>
+			<h2 id="current-time" class="disp">00:00:00</h2>
+			<button id="add-stopwatch">Add Stopwatch</button>
+			<button id="add-countdown">Add Countdown</button>
+		</section>
+		<section id="timer-grid" class="timer-grid"></section>
+		<section id="prompt-wrapper" class="prompt-wrapper">
+			<section class="prompt">
+				<h2 id="prompt-text">Prompt</h2>
+				<button class="prompt-exit" id="prompt-exit"><i class="ph ph-x"></i></button>
+				<form id="prompt-form">
+					<p class="input-wrapper">
+						<input type="number" value=0>
+						<span>:</span>
+						<input type="number" value=0>
+						<span>:</span>
+						<input type="number" value=0>
+					</p>
+					<input type="submit">
+				</form>
+			</section>
+		</section>
+		<!-- Easter Egg -->
+		<article class="pink">
+			<h2>Time - Pink Floyd</h2>
+			<p>
+			Ticking away the moments that make up the dull day. <br>
+			Fritter and waste all the hours in an offhand way. <br>
+			Kicking around on a piece of ground in your hometown. <br>
+			Waiting for someone or something to show the way. <br>
+			</p> <br>
+			<p>
+			Tired of lying in the sunshine, staying home to watch the rain. <br>
+			You are young and life is long, and there is time to kill today. <br>
+			And then one day you find, then years have got behing you. <br>
+			No one told you when to run, you missed the starting gun. <br>
+			</p> <br>
+			<p>
+			And you run and you run to catch up with the sun, but it's sinking. <br>
+			Racing around to come up behind you again. <br>
+			The sun is the same, in a relative way, but you're older. <br>
+			Shorter of breath and one day closer to death. <br>
+			</p> <br>
+			<p>
+			Every year is getting shorter, never seem to find the time. <br>
+			Plans that either come to naught, or half a page of scribbled lines. <br>
+			Hanging on in quiet desparation is the English way. <br>
+			The time is gone, the song is over. Thought I'd something more to say. <br>
+			</p> <br>
+			<p>
+			Home, home again. I like to be here when I can. <br>
+			When I come home, cold and tired. It's good to warm my bones beside the fire. <br>
+			Far away, across the field. <br>
+			The tolling of the iron bell. <br>
+			Calls the faithfull to their knees. <br>
+			To hear the softly spoken magic spell. <br>
+			</p> <br>
+		</article>
 	</main>
 	<footer id="footer"></footer>
 </body>

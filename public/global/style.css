@@ -7,8 +7,8 @@
 }
 
 @font-face {
-	font-family: SevenSegment;
-	src: url('/res/SevenSegment.ttf') format('truetype');
+	font-family: DSEG7Classic;
+	src: url('/res/DSEG7Classic-Regular.ttf') format('truetype');
 }
 
 :root {

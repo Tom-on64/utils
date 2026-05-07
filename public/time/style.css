@@ -1,0 +1,128 @@
+.disp {
+	min-width: 14ch;
+	padding: 8px 2ch;
+	color: var(--color-failure);
+	background: var(--color-border);
+	box-shadow: 4px 4px 0 #000;
+	font-family: DSEG7Classic, monospace;
+	text-align: center;
+}
+
+.timer-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 8px;
+}
+
+.timer {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 12px;
+	background: var(--color-border);
+	box-shadow: 4px 4px 0 var(--color-shadow);
+}
+
+.timer .disp {
+	width: 100%;
+	background: var(--color-background);
+}
+
+.timer .buttons {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 6px;
+}
+
+.timer .buttons .tall { grid-row: span 2; }
+
+.timer .buttons button {
+	background: var(--color-background);
+	/* NOTE: Idk if it's not too much box-shadow: none; */
+}
+
+.prompt-wrapper {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: #0008;
+	z-index: 200;
+}
+
+.prompt {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	background: var(--color-background);
+	box-shadow: 8px 8px 0 var(--color-shadow);
+}
+
+.prompt-exit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1em;
+}
+
+.prompt form {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+
+#easter-egg { user-select: none; }
+#easter-egg:hover { opacity: 90%; }
+
+.pink {
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	flex-direction: column;
+	gap: 1ch;
+	padding: 1em;
+	margin: 2em;
+	background: var(--color-background);
+	border: 2px solid var(--color-border);
+	box-shadow: 4px 4px 0 var(--color-shadow);
+}
+.pink.active { display: flex; }
+
+@media (max-width: 700px) {
+	.pink {
+		width: 95%;
+		height: 80%;
+		overflow: auto;
+		margin: 4em 4px;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 1210px) {
+	.pink {
+		width: 90%;
+		margin: 8px;
+	}
+}
+
