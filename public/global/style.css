@@ -6,15 +6,21 @@
 	src: url('/res/FiraCode-Regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: SevenSegment;
+	src: url('/res/SevenSegment.ttf') format('truetype');
+}
+
 :root {
 	--color-foreground: #A2AAB3;
 	--color-background: #112A2A;
 	--color-accent: #187A7A;
 	--color-border: #001A1A;
+	--color-shadow: #00090b;
 	--color-success: #3AAA1F;
 	--color-failure: #FB4324;
 	--nav-closed: 3.9em;
-	--nav-open: 12em;
+	--nav-open: 13em;
 
 	color: var(--color-foreground);
 	background: var(--color-background);
@@ -91,9 +97,9 @@ footer {
 	bottom: 0;
 	right: 0;
 	padding: 4px;
-	margin: 4px;
+	margin: 16px;
 	background: var(--color-border);
-	border-radius: 4px;
+	box-shadow: 4px 4px 0 var(--color-shadow);
 	font-size: 0.8em;
 	opacity: 30%;
 	transition: opacity 300ms;
@@ -111,7 +117,7 @@ h1::after {
 	position: relative;
 	top: -8px;
 	content: '';
-	margin: 2px 8px;
+	margin: 4px 8px;
 	border: 1px solid var(--color-accent);
 	opacity: 40%;
 }
@@ -129,9 +135,9 @@ button {
 	padding: 4px 2ch;
 	color: var(--color-foreground);
 	background: var(--color-border);
-	border: 2px solid var(--color-border);
-	border-radius: 4px;
-	transition: border-color 200ms, transform 50ms;
+	border: 1px solid var(--color-border);
+	box-shadow: 4px 4px 0 var(--color-shadow);
+	transition: background 200ms, transform 50ms, box-shadow 50ms;
 	font-family: "FiraCode", sans-serif;
 }
 
@@ -140,7 +146,8 @@ button:hover {
 }
 
 button:active {
-	transform: scale(97%);
+	transform: translate(4px, 4px);
+	box-shadow: 0 0 0 var(--color-shadow);
 }
 
 hr {
@@ -152,11 +159,11 @@ hr {
 input, textarea {
 	width: 100%;
 	padding: 4px 8px;
-	margin: 0 1ch;
+	margin: 2px 1ch;
 	color: var(--color-foreground);
 	background: var(--color-border);
-	border: 2px solid var(--color-border);
-	border-radius: 4px;
+	border: 1px solid var(--color-border);
+	box-shadow: 4px 4px 0 var(--color-shadow);
 	outline: none;
 	font-family: "FiraCode", sans-serif;
 }
@@ -164,7 +171,7 @@ input, textarea {
 textarea {
 	margin: 2em;
 	font-size: 1.4em;
-	border-radius: 8px;
+	box-shadow: 6px 6px 0 var(--color-shadow);
 	resize: none;
 }
 
@@ -176,6 +183,7 @@ textarea:focus, input:focus {
 .labeled-input {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-direction: row;
 }
 

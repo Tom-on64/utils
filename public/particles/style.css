@@ -10,7 +10,7 @@ h2 { font-size: 1.2em; }
 	margin: 2em;
 	background: var(--color-background);
 	border: 2px solid var(--color-border);
-	border-radius: 12px;
+	box-shadow: 4px 4px 0 var(--color-shadow);
 }
 
 .warning {
@@ -26,7 +26,7 @@ h2 { font-size: 1.2em; }
 	margin: 2em;
 	color: var(--color-background);
 	background-color: var(--color-failure);
-	border-radius: 16px;
+	box-shadow: 4px 4px 0 var(--color-shadow);
 	font-size: 0.8em;
 }
 
