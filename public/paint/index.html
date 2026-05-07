@@ -7,24 +7,132 @@
 	<title>My Utilities</title>
 	<link rel="stylesheet" href="/global/style.css">
 	<script src="/global/pagegen.js" defer></script>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="paint.js" defer></script>
 </head>
 <body>
 	<nav id="nav"></nav>
 	<main>
-		<h1>Paint</h1>
-		<h2>Basic page structure:</h2>
-		<p>
-			I want a big canvas (configurable size?) with a toolbar underneath.
-		</p>
-		<h2>Tools</h2>
-		<ul>
-			<li>Pixel/square brush</li>
-			<li>Circle brush</li>
-			<li>Noise/spray brush</li>
-			<li>Color selection with presets</li>
-			<li>Two working colors: foreground &amp; background</li>
-			<li>Line, rect, circle, etc. tool</li>
-		</ul>
+		<div class="canvas-container">
+			<div class="canvas-wrapper">
+				<canvas id="canvas"></canvas>
+			</div>
+			<section class="status">
+				<p>Tool: <span id="status-tool">Pencil</span></p>
+				<p><span id="status-size">4px</span></p>
+				<p><span id="status-pos">0, 0</span></p>
+				<p><span id="status-dim">800 x 600</span></p>
+			</section>
+		</div>
+		<div class="toolbar">
+			<!-- Nestiham shit
+			<div class="tools misc">
+				<button id="tool-undo">
+					<i class="ph ph-arrow-u-up-left"></i>
+					<p class="tooltip">Undo</span>
+				</button>
+				<button id="tool-new">
+					<i class="ph ph-file"></i>
+					<p class="tooltip">New Drawing</span>
+				</button>
+				<button id="tool-redo">
+					<i class="ph ph-arrow-u-up-right"></i>
+					<p class="tooltip">Redo</span>
+				</button>
+				<button id="tool-save">
+					<i class="ph ph-download-simple"></i>
+					<p class="tooltip">Save As</span>
+				</button>
+			</div>
+			<div class="tools brush">
+				<button id="tool-pencil active">
+					<i class="ph ph-pencil"></i>
+					<p class="tooltip">Pencil</span>
+				</button>
+				<button id="tool-brush">
+					<i class="ph ph-paint-brush"></i>
+					<p class="tooltip">Brush</span>
+				</button>
+				<button id="tool-eraser">
+					<i class="ph ph-eraser"></i>
+					<p class="tooltip">Eraser</span>
+				</button>
+				<button id="tool-bucket">
+					<i class="ph ph-paint-bucket"></i>
+					<p class="tooltip">Bucket</span>
+				</button>
+				<button id="tool-spray">
+					<i class="ph ph-spray-bottle"></i>
+					<p class="tooltip">Spray</span>
+				</button>
+				<button id="tool-eyedropper">
+					<i class="ph ph-eyedropper"></i>
+					<p class="tooltip">Color Picker</span>
+				</button>
+			</div>
+			<div class="tools shape">
+				<-- Shoutout inline SVG, saved my ass from having to make hella icons ->
+				<button id="tool-line">
+					<svg width="16" height="16"><line x1="2" y1="14" x2="14" y2="2" stroke-width="1.5"/></svg>
+					<p class="tooltip">Line</span>
+				</button>
+				<button id="tool-line_dash">
+					<svg width="16" height="16"><line x1="2" y1="14" x2="14" y2="2" stroke-width="1.5"/></svg>
+					<p class="tooltip">Line (dashed)</span>
+				</button>
+				<button id="tool-rect">
+					<svg width="16" height="16"><rect x="2" y="4" width="12" height="8" fill="none" stroke-width="1.5"/></svg>
+					<p class="tooltip">Rectangle</span>
+				</button>
+				<button id="tool-rect_fill">
+					<svg width="16" height="16"><rect x="2" y="4" width="12" height="8" /></svg>
+					<p class="tooltip">Filled Rectangle</span>
+				</button>
+				<button id="tool-circle">
+					<svg width="16" height="16"><circle cx="8" cy="8" r="5" fill="none" stroke-width="1.5"/></svg>
+					<p class="tooltip">Circle</span>
+				</button>
+				<button id="tool-circle_fill">
+					<svg width="16" height="16"><circle cx="8" cy="8" r="5"/></svg>
+					<p class="tooltip">Filled Circle</span>
+				</button>
+				<button id="tool-ellipse">
+					<svg width="16" height="16"><ellipse cx="8" cy="8" rx="6" ry="4" fill="none" stroke-width="1.5"/></svg>
+					<p class="tooltip">Ellipse</span>
+				</button>
+				<button id="tool-ellipse_fill">
+					<svg width="16" height="16"><ellipse cx="8" cy="8" rx="6" ry="4"/></svg>
+					<p class="tooltip">Filled Ellipse</span>
+				</button>
+				<button id="tool-star_fill">
+					<svg width="16" height="16"><polygon points="8,1 9.9,6.5 15.5,6.5 11,10 12.9,15.5 8,12 3.1,15.5 5,10 0.5,6.5 6.1,6.5" fill="#000"/></svg>
+					<p class="tooltip">Star</span>
+				</button>
+			</div>
+			<div class="tools size">
+				<button id="tool-size-1">
+					<p class="brush-size">1px</p>
+				</button>
+				<button id="tool-size-2">
+					<p class="brush-size">2px</p>
+				</button>
+				<button id="tool-size-4 active">
+					<p class="brush-size">4px</p>
+				</button>
+				<button id="tool-size-8">
+					<p class="brush-size">8px</p>
+				</button>
+				<button id="tool-size-16">
+					<p class="brush-size">16px</p>
+				</button>
+				<button id="tool-size-32">
+					<p class="brush-size">32px</p>
+				</button>
+			</div>
+			-->
+			<div class="tools color"></div>
+		</div>
 	</main>
 	<footer id="footer"></footer>
 </body>

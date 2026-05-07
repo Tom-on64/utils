@@ -1,0 +1,68 @@
+main {
+	display: flex;
+	flex-direction: row;
+}
+
+.canvas-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.canvas-wrapper {
+	padding: 8px;
+	overflow: auto;
+}
+
+#canvas {
+	box-shadow: 8px 8px 0 var(--color-shadow);
+	background: #fff;
+	cursor: crosshair;
+	image-rendering: pixelated;
+}
+
+.toolbar {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 1em;
+	margin: 0.2em;
+	color: var(--color-foreground);
+}
+.toolbar svg {
+	fill: var(--color-foreground);
+	stroke: var(--color-foreground);
+}
+
+.toolbar .tools {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4px;
+}
+
+.toolbar .tools button {
+	position: relative;
+	aspect-ratio: 1 / 1;
+	width: 1.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2px;
+	font-size: 1em;
+}
+.brush-size { font-size: 0.8em; }
+
+.toolbar .tools button .tooltip {
+	display: none;
+	position: absolute;
+}
+
+.toolbar .tools button:hover .tooltip {
+	display: block;
+}
+
+.status {
+	display: flex;
+	flex-direction: row;
+	gap: 4ch;
+}
+

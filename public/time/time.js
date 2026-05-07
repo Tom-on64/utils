@@ -201,7 +201,8 @@ function update(time) {
 
 	for (const t of timers) t.update(delta);
 
-	current_time.innerText = unix_to_string(Date.now());
+	const ts = new Date();
+	current_time.innerText = `${pad(ts.getHours())}:${pad(ts.getMinutes())}:${pad(ts.getSeconds())}.${pad(ts.getMilliseconds(), 3)}`;
 
 	requestAnimationFrame(update);
 }
